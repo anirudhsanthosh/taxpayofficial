@@ -176,6 +176,8 @@ button.toggle:focus {
   nav.show .dropdown {
     height: auto;
     opacity: 1;
+    position: relative;
+    pointer-events: all;
   }
   .dropdown {
     height: auto;
@@ -187,6 +189,8 @@ button.toggle:focus {
     height: 0px;
     opacity: 0;
     transition: all 0.5s ease;
+    position: absolute;
+    pointer-events: none;
   }
   .services ul {
     width: 100%;
