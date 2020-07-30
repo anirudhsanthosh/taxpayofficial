@@ -3,7 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style/index.css" />
     <title>TaxPayOfficial</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo" />
+      </div>
+      <div class="toggle-div">
+        <button class="toggle">
+          &#9776;
+        </button>
+      </div>
+
+      <div class="dropdown">
+        <button>
+          <a href="index.html">Home</a>
+        </button>
+        <div class="services">
+          <button>Services</button>
+          <ul>
+            <li><a href="#">Bussiness Registration</a></li>
+            <li><a href="#">GST Service</a></li>
+            <li><a href="#">Startup Support</a></li>
+            <li><a href="#">Tax Filing</a></li>
+            <li><a href="#">5th option</a></li>
+          </ul>
+        </div>
+        <button>
+          <a href="#">Contact Us</a>
+        </button>
+        <button>
+          <a href="about.html">About Us</a>
+        </button>
+      </div>
+    </nav>
+    <section class="hero-section">
+      <div class="hero-description">
+        <h1>
+          <!-- <img src="./images/hero-logo.svg" /> -->
+          TAX PAY
+        </h1>
+        <p>Your tax partner</p>
+      </div>
+      <div class="main-hero-image">
+        <img src="./images/hero.svg" alt="hero" />
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="services">
+        <div class="panel">
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="./images/new-registration.svg"
+                  alt="new bussiness registration"
+                />
+              </div>
+              <div class="card-title">
+                Bussiness Registration
+              </div>
+              <div class="card-button">
+                <a href="#">More info</a>
+              </div>
+            </div>
+          </div>
+          <!-- second column -->
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="./images/gst_service.svg"
+                  alt="new bussiness registration"
+                />
+              </div>
+              <div class="card-title">
+                GST Service
+              </div>
+              <div class="card-button">
+                <a href="#">More info</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- third column -->
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="./images/startup_support.svg"
+                  alt="new bussiness registration"
+                />
+              </div>
+              <div class="card-title">
+                Startup Support
+              </div>
+              <div class="card-button">
+                <a href="#">More info</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- fourth column  -->
+
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <img
+                  src="./images/tax_filing.svg"
+                  alt="new bussiness registration"
+                />
+              </div>
+              <div class="card-title">
+                Tax Filing
+              </div>
+              <div class="card-button">
+                <a href="#">More info</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- fifth column -->
+          <div class="column">
+            <div class="card">
+              <div class="card-image">
+                <img src="./images/5.svg" alt="new bussiness registration" />
+              </div>
+              <div class="card-title">
+                5th option
+              </div>
+              <div class="card-button">
+                <a href="#">More info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./script/app.js"></script>
+  </body>
 </html>
