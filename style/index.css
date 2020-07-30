@@ -1,0 +1,381 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  /* height: 100vh; */
+  font-family: "Heebo", sans-serif;
+  background: rgba(243 30 30, 0.2);
+}
+
+a,
+button {
+  font-family: "Heebo", sans-serif;
+}
+
+/* navigation bar */
+
+nav {
+  position: sticky;
+  display: flex;
+  min-height: 10vh;
+  align-items: center;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+  transition: all 0.4s ease;
+}
+nav.disabled {
+  opacity: 1;
+  pointer-events: none;
+  top: -10vh;
+  transform: translateY(-10vh);
+  min-height: 0px;
+  max-height: 0px;
+}
+nav.disabled:nth-last-child(odd),
+nav.disabled:nth-last-child(even) {
+  display: none;
+}
+
+nav .logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin-left: 25px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+nav .toggle-div {
+  display: none;
+}
+.dropdown {
+  height: 10vh;
+  width: 60%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dropdown button,
+button a {
+  background: none;
+  border: none;
+  color: rgb(243, 30, 30);
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dropdown button:hover,
+button a:hover {
+  color: #ac1515;
+}
+
+.services {
+  position: relative;
+}
+.services ul {
+  position: absolute;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background: rgb(255, 255, 255);
+  color: rgb(243, 30, 30);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  transform: translateY(-15px);
+}
+
+.services a {
+  color: rgb(243, 30, 30);
+  text-decoration: none;
+}
+
+.services li,
+.services li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  /* border-radius: 5px; */
+}
+.services li:hover,
+.services li:hover a {
+  background: rgb(243, 30, 30);
+  color: #fff;
+}
+.services button:focus {
+  border: none;
+  outline: none;
+}
+
+.services button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+button.toggle,
+button.toggle:focus {
+  padding: 0.7rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@media only screen and (max-width: 850px) {
+  nav {
+    position: sticky;
+    display: block;
+    min-height: 10vh;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+    transition: all 0.4s ease;
+  }
+  nav .logo {
+    width: 50%;
+    float: left;
+    justify-content: flex-start;
+  }
+  nav .logo img {
+    width: 50px;
+    float: left;
+  }
+  nav .toggle-div {
+    display: block;
+    float: right;
+  }
+
+  nav.show .dropdown {
+    height: auto;
+    opacity: 1;
+  }
+  .dropdown {
+    height: auto;
+    width: 100%;
+    padding: 1rem 0rem;
+    display: block;
+    float: left;
+    background: #fff;
+    height: 0px;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .services ul {
+    width: 100%;
+  }
+  .dropdown button {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+  .dropdown button:focus {
+    outline: none;
+  }
+}
+/* hero */
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgb(243, 30, 30);
+  color: #fff;
+  font-family: "Krona One", sans-serif;
+  transition: all 0.5s ease-in;
+}
+
+.hero-section.active {
+  background: #fff;
+  color: rgb(243, 30, 30);
+  height: 20vh;
+}
+.hero-section .hero-description h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section .hero-description img {
+  width: 150px;
+  height: auto;
+}
+.hero-section .hero-description,
+.hero-section .main-hero-image {
+  width: 50%;
+  text-align: center;
+}
+.hero-section .main-hero-image img {
+  width: 90%;
+  object-fit: cover;
+}
+
+.hero-section h1 {
+  font-size: 70px;
+}
+.hero-section p {
+  font-size: 32px;
+}
+
+@media only screen and (max-width: 850px) {
+  .hero-section {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .hero-section .hero-description,
+  .hero-section .main-hero-image {
+    width: 100%;
+  }
+}
+/* services */
+.container .services {
+  width: 100%;
+  height: 90vh;
+  padding-top: 10vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+}
+.container .services .panel {
+  width: 100%;
+  background: rgb(254, 254, 255);
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.container .services .panel .column {
+  width: 25%;
+
+  padding: 1rem;
+}
+.container .services .panel .card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.container .services .panel .card:hover {
+  box-shadow: 1px 9px 20px -4px rgba(0, 0, 0, 0.1);
+}
+
+.container .services .panel .card-image {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .services .panel .card-image img {
+  width: 100px;
+  object-fit: cover;
+}
+.container .services .panel .card-title {
+  font-size: 26px;
+}
+.container .services .panel .card-button,
+.container .services .panel .card-title {
+  width: 100%;
+  padding: 0.5rem;
+}
+.container .services .panel .card-button a {
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(243, 30, 30);
+  color: rgb(243, 30, 30);
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.container .services .panel .card-button a:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(243, 30, 30);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 850px) {
+  .container .services .panel .column {
+    width: 100%;
+
+    padding: 1rem;
+  }
+}
+
+/* animation */
+.fade-in-left {
+  animation: fade-in-left 1.5s ease-in-out forwards;
+}
+.fade-in-right {
+  animation: fade-in-right 1.5s ease-in-out forwards;
+}
+.fade-in-up {
+  animation: fade-in-up 1.5s ease-in-out forwards;
+}
+
+@keyframes fade-in-left {
+  from {
+    transform: translateX(-15%);
+
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-up {
+  from {
+    transform: translateY(15%);
+
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    transform: translateX(15%);
+
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
