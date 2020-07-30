@@ -7,13 +7,13 @@ const scrolling = () => {
   const screenHeight = window.innerHeight;
 
   if (heroSection) {
-    // if (this.scrollY > this.innerHeight / 8) {
-    //   heroSection.classList.add("active");
-    //   nav.classList.remove("disabled");
-    // } else {
-    //   heroSection.classList.remove("active");
-    //   nav.classList.add("disabled");
-    // }
+    if (this.scrollY > this.innerHeight / 8) {
+      heroSection.classList.add("active");
+      nav.classList.remove("disabled");
+    } else {
+      heroSection.classList.remove("active");
+      nav.classList.add("disabled");
+    }
   }
   if (hero) {
     if (hero.getBoundingClientRect().top < screenHeight) {

@@ -189,8 +189,8 @@ button.toggle:focus {
     height: 0px;
     opacity: 0;
     transition: all 0.5s ease;
-    position: absolute;
-    pointer-events: none;
+    /* position: absolute;
+    pointer-events: none; */
   }
   .services ul {
     width: 100%;
